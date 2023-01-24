@@ -20,14 +20,36 @@
       //alert(`you choosed ${player}`);
 
       if (player == 1) {
-        alert(`you choosed: Stone`);
+        alert(`you choosed: 🥌`);
       } else if (player == 2) {
-        alert(`you choosed: Paper`);
+        alert(`you choosed: 🗞`);
       } else if (player == 3) {
-        alert(`you choosed: Scissors`);
+        alert(`you choosed: ✂`);
       } else {
         alert(`Choose fail!!!!`);
       }
+
+      if (pc == 1) {
+        alert(`PC choosed: 🥌`);
+      } else if (pc == 2) {
+        alert(`PC choosed: 🗞`);
+      } else if (pc == 3) {
+        alert(`PC choosed: ✂`);
+      } else {
+        alert(`Choose fail!!!!`);
+      }
+
+      //Combat
+
+      if (pc == player) {
+        alert(`TIE!`);
+      } else if (player == 1 && pc == 3) {
+        alert(`You Win!!!`);
+      } else if (player == 2 && pc == 1) {
+        alert(`You Win!!!`);
+      } else if (player == 3 && pc == 2) {
+        alert(`You Win!!!`);
+      } else alert(`You Fail!!!`);
     </script>
   </body>
 </html>
