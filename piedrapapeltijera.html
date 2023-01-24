@@ -12,8 +12,12 @@
     <script>
       // 1 es piedra, 2 es papel, 3 es tijera
 
-      let player = 0,
-        pc = 2;
+      const random = (max, min) => {
+        return Math.floor(Math.random() * (max - min + 1) + 1);
+      };
+
+      let player = 0;
+      pc = random(3, 1);
 
       player = prompt(`choose 1 is stone, 2 is paper or 3 is scissors`);
 
