@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piedra, papel o tijera</title>
+  </head>
+  <body>
+    <h1>Piedra, papel o tijera</h1>
+
+    <script>
+      // 1 es piedra, 2 es papel, 3 es tijera
+
+      let player = 0,
+        pc = 2;
+
+      player = prompt(`choose 1 is stone, 2 is paper or 3 is scissors`);
+
+      //alert(`you choosed ${player}`);
+
+      if (player == 1) {
+        alert(`you choosed: Stone`);
+      } else if (player == 2) {
+        alert(`you choosed: Paper`);
+      } else if (player == 3) {
+        alert(`you choosed: Scissors`);
+      } else {
+        alert(`Choose fail!!!!`);
+      }
+    </script>
+  </body>
+</html>
