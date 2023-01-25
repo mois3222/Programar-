@@ -7,3 +7,5 @@
 - all commands of git.
 - Workflow in git hub.
 - the true love of the good practices.
+- this documentation is doing develops by Moises Buenanio Tuberquia.
+- as soon as my English level is better i will done, get international work.
