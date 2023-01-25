@@ -1,2 +1,9 @@
-# Programar-
-Aprenderé a programar BIEN y en este repositorio esta toda mi documentación.   
+## Basic programming
+
+> I'll learn to be a very good developer and this repository is all my documentation.
+
+**In this curse, we watch ever. **
+
+- all commands of git.
+- Workflow in git hub.
+- the true love of the good practices.
