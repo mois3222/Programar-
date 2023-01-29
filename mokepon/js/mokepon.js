@@ -4,16 +4,41 @@ const d = document,
   label = d.querySelectorAll(`label`),
   enemysPet = d.getElementById(`enemysPet`),
   allButtons = d.querySelectorAll("button"),
-  messege = d.getElementById("msg");
+  messege = d.getElementById("msg"),
+  spanAll = d.querySelectorAll(`span`);
 
 const random = (max, min) => {
   return Math.floor(Math.random() * (max - min + 1) + 1);
 };
 
-const msgAndMore = (el, n) => {
-  let randomMore = random(3, 1);
+let randomMore = random(3, 1),
+  playerHearth = 3,
+  enemyHearth = 3;
 
+const msgAndMore = (el, n) => {
   messege.innerHTML += `<p> Your pet attacked to - ${el}. enemys'pet attacked to - ${allButtons[randomMore].textContent} ....`;
+
+  if (n === randomMore) {
+    spanAll[4].textContent = `it's TIE!!!`;
+
+    setTimeout(() => {
+      spanAll[4].textContent = null;
+    }, 2000);
+  } else if (
+    (n === 2 && randomMore === 1) ||
+    (n === 1 && randomMore === 3) ||
+    (n === 3 && randomMore === 2)
+  ) {
+    spanAll[3].textContent = enemyHearth = enemyHearth - 1;
+  } else {
+    spanAll[1].textContent = playerHearth = playerHearth - 1;
+  }
+
+  playerHearth === 0
+    ? alert(`You fail !😱😨🙀!`)
+    : enemyHearth === 0
+    ? alert(`YOU WIN, WELL DONE 🥳🙌🎉🎈`)
+    : null;
 };
 
 d.addEventListener("DOMContentLoaded", (element) => {
