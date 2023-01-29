@@ -1,13 +1,12 @@
 const d = document,
   inputPets = d.querySelectorAll(`input`),
-  PlayerPetbutton = document.querySelector("#buttonPets");
+  PlayerPetbutton = document.querySelector("#buttonPets"),
+  playersPet = d.getElementById("playersPet");
 
 d.addEventListener("DOMContentLoaded", (element) => {
   PlayerPetbutton.addEventListener("click", (e) => {
     inputPets.forEach((item) =>
-      item.checked
-        ? console.log(item.id)
-        : console.log(`Please select a pet!!!`)
+      item.checked ? (playersPet.textContent = item.id) : null
     );
   });
 });
