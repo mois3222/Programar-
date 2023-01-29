@@ -35,9 +35,9 @@ const msgAndMore = (el, n) => {
   }
 
   playerHearth === 0
-    ? alert(`You fail !😱😨🙀!`)
+    ? alert(`You fail !😱😨🙀!, (${playerHearth} - ${enemyHearth})`)
     : enemyHearth === 0
-    ? alert(`YOU WIN, WELL DONE 🥳🙌🎉🎈`)
+    ? alert(`YOU WIN, WELL DONE 🥳🙌🎉🎈, (${playerHearth} - ${enemyHearth})`)
     : null;
 };
 
