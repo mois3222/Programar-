@@ -1,12 +1,19 @@
 const d = document,
   inputPets = d.querySelectorAll(`input`),
-  PlayerPetbutton = document.querySelector(".buttonPets"),
   playersPet = d.getElementById("playersPet"),
   label = d.querySelectorAll(`label`),
-  enemysPet = d.getElementById(`enemysPet`);
+  enemysPet = d.getElementById(`enemysPet`),
+  playerAttack = d.getElementById("playerAttack"),
+  enemyAttack = d.getElementById("enemyAttack"),
+  allButtons = d.querySelectorAll("button");
 
 const random = (max, min) => {
   return Math.floor(Math.random() * (max - min + 1) + 1);
+};
+
+const msg = (el) => {
+  enemyAttack.textContent = allButtons[random(3, 1)].textContent;
+  playerAttack.textContent = el;
 };
 
 d.addEventListener("DOMContentLoaded", (element) => {
@@ -16,12 +23,11 @@ d.addEventListener("DOMContentLoaded", (element) => {
         item.checked ? (playersPet.textContent = item.id) : null
       );
 
-    if (e.target.matches(".buttonFire")) alert(`You attack is fire element 🔥`);
+    if (e.target.matches(".buttonFire")) msg(`🔥Fire🔥`);
 
-    if (e.target.matches(".buttonAqua")) alert(`You attack is Aqua element💧`);
+    if (e.target.matches(".buttonAqua")) msg(`💧Aqua💧`);
 
-    if (e.target.matches(".buttonTerra"))
-      alert(`You attack is Terra element🌱`);
+    if (e.target.matches(".buttonTerra")) msg(`🌱Terra🌱`);
   });
 
   try {
