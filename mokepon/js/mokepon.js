@@ -34,6 +34,11 @@ const msgAndMore = (el, n) => {
     spanAll[1].textContent = playerHearth = playerHearth - 1;
   }
 
+  if (playerHearth === 0 || enemyHearth === 0) {
+    allButtons[1].disabled = true;
+    allButtons[2].disabled = true;
+    allButtons[3].disabled = true;
+  }
   playerHearth === 0
     ? alert(`You fail !😱😨🙀!, (${playerHearth} - ${enemyHearth})`)
     : enemyHearth === 0
@@ -53,6 +58,8 @@ d.addEventListener("DOMContentLoaded", (element) => {
     if (e.target.matches(".buttonAqua")) msgAndMore(`💧Aqua💧`, 2);
 
     if (e.target.matches(".buttonTerra")) msgAndMore(`🌱Terra🌱`, 3);
+
+    if (e.target.matches(".buttonReset")) location.reload();
   });
 
   try {
