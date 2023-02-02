@@ -1,24 +1,6 @@
-.title {
-  color: hotpink;
-  width: 260pxs;
-  height: 50px;
-  background-color: teal;
-}
-
-label {
-  background-color: bisque;
-  width: 260pxs;
-  height: 50px;
-}
-
-input {
-  background-color: aquamarine;
-  width: 260pxs;
-  height: 50px;
-}
-
-button {
-  background-color: aquamarine;
-  width: 260pxs;
-  height: 50px;
+#selectPet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
